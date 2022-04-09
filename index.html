@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+</head>
+
+<body>
+    <form onsubmit="validateForm()">
+        <div class="form-field">
+            <label>Email*: </label><input id="email" placeholder='Email' type="text" required />
+            <div id="error1" style="color:red; font-size:18px; font-weight:bold;"></div> <!-- Message that appears when nothing is selected-->
+        </div>
+        <br><br>
+        <div class="form-field">
+            <div id="error2" style="color:red; font-size:18px; font-weight:bold;"></div>
+            <label>Mobile Number*: </label><input id="mobile" placeholder="0123456789" type="text" required />
+        </div>
+        <br><br>
+        <div class="form-field">
+            <label id="origin" for="origin">Origin:</label>
+            <select required name='from' id='orig'>
+                <option value="defaultLocation" hidden>Select a location...</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Melbourne">Melbourne</option>
+                <option value="Geelong">Geelong</option>
+                <option value="Canberra">Canberra</option>
+                <option value="Adelaide">Adelaide</option>
+                <option value="Perth">Perth</option>
+                <option value="Hobart">Hobart</option>
+                <option value="Darwin">Darwin</option>
+                <option value="Brisbane">Brisbane</option>
+                <option value="Gold Coast">Gold Coast</option>
+                <option value="Launceston">Launceston</option>
+                <option value="Cairns">Cairns</option>
+            </select>
+        </div>
+        <br><br>
+        <div class="form-field"></div>
+        <label id="destination" for="destination">Destination:</label>
+        <select required name='to' id="destin">
+            <option value="defaultLocation" hidden>Select a location...</option>
+            <option value="Sydney">Sydney</option>
+            <option value="Melbourne">Melbourne</option>
+            <option value="Geelong">Geelong</option>
+            <option value="Canberra">Canberra</option>
+            <option value="Adelaide">Adelaide</option>
+            <option value="Perth">Perth</option>
+            <option value="Hobart">Hobart</option>
+            <option value="Darwin">Darwin</option>
+            <option value="Brisbane">Brisbane</option>
+            <option value="Gold Coast">Gold Coast</option>
+            <option value="Launceston">Launceston</option>
+            <option value="Cairns">Cairns</option>
+        </select>
+        </div>
+        <br><br>
+        <label>Please enter a valid address*</label><input id="address" required type="rich text" placeholder="Enter a valid address"/>
+        
+        <br><br>
+        <label id="country">Country</label>
+        <select required id="country" required>
+        <option value="defaultLocation" hidden>Country</option>
+        <option value="australia">Australia</option>
+        </select>
+        &nbsp;&nbsp;
+        <label>Post Code:</label><input id="postcode" required type="text" maxlength="4" pattern="^[0-9]{4}$" placeholder="1234"/>
+        <div>
+        <input type="submit" value="Submit">
+        </div>
+    </form>
+    
+    <script src="./index.js"></script>
+</body>
+
+</html>
